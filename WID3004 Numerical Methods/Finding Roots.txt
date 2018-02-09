@@ -10,3 +10,5 @@ Steps:
  b. else if A^n == X then A is the answer
  c. else if A^n > X
       then slightly decrease A
+
+Tutorial: Write a JAVA program to do run this.
