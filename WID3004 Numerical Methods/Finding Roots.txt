@@ -1,1 +1,12 @@
-Finding Roots
+Finding Roots -> Newton's Secant Method
+    ________    where n = positive integer
+ n /   X              x = positive floating point value
+ \/
+ 
+Steps:
+1.  Select an initial value for A where target A^n = X
+2a. if A^n < X
+      then slightly increase A
+ b. else if A^n == X then A is the answer
+ c. else if A^n > X
+      then slightly decrease A
