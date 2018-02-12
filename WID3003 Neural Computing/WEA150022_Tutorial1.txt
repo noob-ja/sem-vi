@@ -9,6 +9,11 @@ WID3003 2018 Tutorial 1
 
 2. List 4 examples of neural computing application in various fields [4 marks]
 - Medical -> Diagnosing cancer disease using demographic data
-- Pattern recognition -> 
+- Security -> Facial recognition
+- E-mail -> Spam filtering
+- Financial -> Automated trading system
 
 3. Explain 3 motivations of neural computing research (advantages) [6 marks]
+- Computational power -> Multilayer perceptron is a universal function approximator, using special rational valued weights can result in the power of universal Turing machine using a finite number of neurons.
+- Capacity -> Able to learn and model non-linear and complex relationships, just like in real-life where most relationships between input and output are non-linear and complex
+- Generalization -> Able to infer unseen relationships on unseen data after learning from initial inputs and their relationships, making the model generalize and predict on unseen data

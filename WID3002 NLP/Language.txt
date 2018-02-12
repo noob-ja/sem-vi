@@ -1,7 +1,17 @@
-Hierachy of Language
-------------------------
+Hierachy of Language	>
+---------------------------
 Characters
 Words
 Phrases
 Sentences
 Text (Discourse)
+
+Level of textology		>
+---------------------------
+Prosody / Syllable
+Phonology
+Morphology
+Syntax (Sentence)
+Semantics (Meaning)
+Pragmatic
+Discourse
