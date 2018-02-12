@@ -1,0 +1,13 @@
+WID3003 2018 Tutorial 1
+
+1. Identify pioneers (key players) of neural computing. (5 names & their expertise) e.g. Bayes [5 marks]
+- Thomas Bayes (Statistics) -> Discover Bayes' Theorem
+- Andrei Andreyevich Markov (Mathematics) -> Discover Markov chains
+- Marvin Minsky (Cognitive Science, Computer Science, Artifical Intelligence) -> Discover First neural network, the SNARC
+- Frank Rosenblatt (Psychology) -> Discover Perceptron
+- Kunihiko Fukushima (Electrical Engineering) -> Discover Neocognitron
+
+2. List 4 examples of neural computing application in various fields [4 marks]
+
+
+3. Explain 3 motivations of neural computing research (advantages) [6 marks]
