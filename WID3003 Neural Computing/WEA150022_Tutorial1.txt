@@ -8,6 +8,7 @@ WID3003 2018 Tutorial 1
 - Kunihiko Fukushima (Electrical Engineering) -> Discover Neocognitron
 
 2. List 4 examples of neural computing application in various fields [4 marks]
-
+- Medical -> Diagnosing cancer disease using demographic data
+- Pattern recognition -> 
 
 3. Explain 3 motivations of neural computing research (advantages) [6 marks]

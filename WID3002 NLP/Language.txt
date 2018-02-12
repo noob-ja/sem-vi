@@ -1,0 +1,7 @@
+Hierachy of Language
+------------------------
+Characters
+Words
+Phrases
+Sentences
+Text (Discourse)
