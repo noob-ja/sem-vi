@@ -1,0 +1,27 @@
+1. List the advantages of Artificial Neural Networks compared with traditional hard computing methods. [3 marks]
+
+Hard computing require precisely stated analytical model and often a lot of computation time. ANN tolerates imprecision, uncertainty, partial truth and approximation.
+Hard computing based on binary logic, crisp system and numerical analysis. ANN is based on the human mind, biological neuron.
+Hard computing require exact input data, ANN is able to handle noise and adapt to changes.
+
+2. Identify applications of Artificial Neural Network.[2 marks] 
+
+Spam email filtering
+Pattern recognition
+
+3. Describe the components of a biological neuron.[5 marks]
+
+Dendrites: Input receiver
+Cell body / Soma: Housing nucleus
+Nucleus: Processing unit
+Axon: Output transmit
+Synapse: Connection between neurons
+
+4. Explain the components of an artificial neuron. [5 marks]
+
+Input: Input from the data
+Weightage: Acting as the "memory" for the perceptron
+Bias: For tuning / supervised learning of the perceptron
+Summation function: Summing the input to a value
+Activation function: Generating output based on the value from summation function
+Output: Output generated from the perceptron

@@ -1,0 +1,11 @@
+soft computing
+- deals iwth approximate models 
+- gives solutions to complex real-life problems
+- tolerant of imprecision, uncertainty, partial truth and approximation
+- role model: human mind
+- techniques: fuzzy logic, genetic algo, ANN, machine learning and expert systems
+- introduced in 1980s
+- now major research in automatic control engineering
+- low-cost and very-high-performance digital processor and reduction of cost of memory chips -> expand SC
+- achieve practicability, robustness and low cost solution
+- involve evolutionary and swarm intelligence based algo / bio-inspired computation
