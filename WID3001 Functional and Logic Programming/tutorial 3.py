@@ -34,5 +34,9 @@ print(met3)
 
 #Question 3
 arr = [9,5,8,4,2,1,6]
-arr_res = reduce(lambda x,y: x+y, [x for x in map(lambda x:x,filter(lambda x:x%2==0, arr))])
+arr_res = [x for x in map(lambda x:x,filter(lambda x:x%2==0, arr))]
 print(arr_res)
+
+#Question 4
+arr_reduce = reduce(lambda x,y: x+y, arr)
+print(arr_reduce)
