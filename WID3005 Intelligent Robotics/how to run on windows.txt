@@ -1,0 +1,38 @@
+how to reset rovio
+1. turn on rovio
+2. wait until the on button shows orange light
+3. turn off rovio
+4. repeat step 1 - 3 for another two times
+5. stop when you see red light instead of orange light
+6. the on button should be blinking from red-orange-green repeatedly
+7. when green light then rovio is resetted
+
+1. turn on rovio
+
+2. open cmd
+ > netsh wlan show network
+
+3. look for rovio_wowwee in the list
+ > if not in the list, reset the rovio
+
+4. open network and sharing center
+ > set up a new connection or network
+ > manually connect to a wireless network
+
+5. type in the details
+ > network name: ROVIO_WOWWEE
+ > security type: no authentication
+ > uncheck "start connection automatically"
+
+6. open cmd
+ > netsh wlan set profileparameter ROVIO_WOWWEE connectiontype=ibss
+
+7. open cmd
+ > netsh wlan connect ROVIO_WOWWEE
+
+8. check if you are connected to ROVIO_WOWWEE in your wifi
+
+9. open web browser
+ > go to 192.168.10.18
+
+10. yay
