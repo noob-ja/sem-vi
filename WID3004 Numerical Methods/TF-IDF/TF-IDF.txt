@@ -1,0 +1,10 @@
+TF(w) = N(w) / N_t(doc)
+Where N = number of occurence, N_t = number of total words
+
+IDF = log( N_t(doc)/N(w) )
+WHere N_t = number of total words in all documents, N = number of word occurs in all of the documents
+
+let N_t = 100, N(kucing) = 3
+then TF(kucing)= 3/100 = 0.03
+
+let N_t(doc) = 1 000 000, N(kucing) = 1 00
