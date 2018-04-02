@@ -30,3 +30,6 @@ brother(X,Y):- sibling(X,Y), male(X).
 aunty(X,Y):- p_c(Z,Y), sister(X,Z).
 uncle(X,Y):- p_c(Z,Y), brother(X,Z).
 cousin(X,Y):- p_c(Z,Y), sibling(T,Z), p_c(T,X).
+
+ancestor(X,Y):- p_c(X,Y).
+ancestor(X,Y):- p_c(Z,Y), ancestor(X,Z).
