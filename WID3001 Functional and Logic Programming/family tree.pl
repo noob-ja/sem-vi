@@ -1,3 +1,5 @@
+p_c(gg, bapak).
+p_c(bapak, tom).
 p_c(tom, patricia).
 p_c(tom, sarah).
 p_c(tom, max).
@@ -30,6 +32,31 @@ brother(X,Y):- sibling(X,Y), male(X).
 aunty(X,Y):- p_c(Z,Y), sister(X,Z).
 uncle(X,Y):- p_c(Z,Y), brother(X,Z).
 cousin(X,Y):- p_c(Z,Y), sibling(T,Z), p_c(T,X).
-
+son(X,Y):- p_c(Y,X), male(X).
+daughter(X,Y):- p_c(Y,X), female(X).
 ancestor(X,Y):- p_c(X,Y).
 ancestor(X,Y):- p_c(Z,Y), ancestor(X,Z).
+
+%tutorial 8
+/*
+ * Q2a. sister(X,Y)
+ *  X = sarah,
+    Y = patricia
+    X = patricia,
+    Y = sarah
+    X = patricia,
+    Y = max
+    X = sarah,
+    Y = max
+    X = betty,
+    Y = dora
+    X = dora,
+    Y = betty
+ * b. father(david,_) : true
+ * c. aunty(X,james) : sarah
+ * d. aunty(patricia, dora) : true
+ * e. cousin(james, X) : dora, betty
+ * f. mother(X,betty), aunty(X,james) : sarah
+ * g. \+p_c(tom,patricia) : false
+ * h. p_c(max,_); cousin(max,betty) : false
+ */
