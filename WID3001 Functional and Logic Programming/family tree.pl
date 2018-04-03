@@ -60,3 +60,14 @@ ancestor(X,Y):- p_c(Z,Y), ancestor(X,Z).
  * g. \+p_c(tom,patricia) : false
  * h. p_c(max,_); cousin(max,betty) : false
  */
+ 
+lion(leo).
+bear(shawn).
+tiger(tig).
+
+meat_eater(X):- (bear(X);lion(X);tiger(X)).
+
+brown(X):- bear(X).
+big(X):- (bear(X);lion(X);tiger(X)).
+large_animal(X):- big(X), brown(X).
+carnivore(X):- meat_eater(X).
