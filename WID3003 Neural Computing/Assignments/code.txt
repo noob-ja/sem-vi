@@ -1,0 +1,58 @@
+file_in = 'data_in.xlsx';
+read_in = spreadsheetDatastore(file_in);
+read_in.Sheets = {'data_in'};
+% read_in.SelectedVariableNames = {'TemperatureAvg','DewPointAvg','HumidityAvg','SeaLevelPressureAvg','VisibilityAvg','WindAvg','Precipitation'};
+reset(read_in);
+data_in = read(read_in);
+data_in = data_in{:,:};
+data_in = data_in.';
+
+file_tar = 'data_target.xlsx';
+read_tar = spreadsheetDatastore(file_tar);
+read_tar.Sheets = {'data_target'};
+read_tar.SelectedVariableNames = {'Code'};
+reset(read_tar);
+data_tar = read(read_tar);
+data_tar = data_tar{:,:};
+data_tar = data_tar.';
+
+file_in = 'data_in.xlsx';
+read_in = spreadsheetDatastore(file_in);
+read_in.Sheets = {'test'};
+% read_in.SelectedVariableNames = {'TemperatureAvg','DewPointAvg','HumidityAvg','SeaLevelPressureAvg','VisibilityAvg','WindAvg','Precipitation'};
+reset(read_in);
+data_in_test = read(read_in);
+data_in_test = data_in_test{:,:};
+data_in_test = data_in_test.';
+
+file_tar = 'data_target.xlsx';
+read_tar = spreadsheetDatastore(file_tar);
+read_tar.Sheets = {'test'};
+read_tar.SelectedVariableNames = {'Code'};
+reset(read_tar);
+data_tar_test = read(read_tar);
+data_tar_test = data_tar_test{:,:};
+data_tar_test = data_tar_test.';
+
+data_in_norm = data_in;
+for i = 1:7
+row = data_in(i,:);
+for j = 1:1096
+data_in_norm(i,j) = -1 + 2.*(row(j) - min(row))./(max(row) - min(row));
+if data_in_norm(i,j) == -1 data_in_norm(i,j) = 0;, end
+if data_in_norm(i,j) == NaN data_in_norm(i,j) = 0;, end
+end
+end
+
+data_in_test_norm = data_in_test;
+for i = 1:7
+row = data_in_test(i,:);
+for j = 1:90
+data_in_test_norm(i,j) = -1 + 2.*(row(j) - min(row))./(max(row) - min(row));
+if data_in_test_norm(i,j) == -1 data_in_test_norm(i,j) = 0;, end
+if data_in_test_norm(i,j) == NaN data_in_test_norm(i,j) = 0;, end
+end
+end
+
+res = net(data_in_test_norm);
+figure, plotconfusion(data_tar_test,res);
