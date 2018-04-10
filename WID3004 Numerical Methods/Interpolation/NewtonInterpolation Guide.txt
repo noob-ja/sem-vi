@@ -1,0 +1,2 @@
+Use divided difference to calculate the suffix for each layer
+Then use the calculated suffix to do newton interpolation
