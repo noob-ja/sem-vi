@@ -1,0 +1,5 @@
+surface.2d1 =  raw surface data (coordinates)
+asal1       =  raw surface data (visualise)
+plot1       =  local view of robot (where robot is always at (0,0)) with occlusion information (marked as red)
+plot-1      =  local view after turnAngle and moveDistance (forward kinematics)
+ltm         =  the growing map (global reference frame)
