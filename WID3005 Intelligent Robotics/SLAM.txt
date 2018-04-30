@@ -1,0 +1,35 @@
+between occludin and occluded, there is an area we cant see, which to be explore, there is a space the robot might go to expand the map 
+
+
+
+global view = combination of local views
+
+slam = simultaneous localization and mapping
+
+global view 0 = local view 0 
+
+laser = rangefinder = more like sonar 
+vision is different, no range (but stereo camera can)
+Answer: add another camera to form stereo image to improve rovio to do SLAM, distance based input to get cartesian coordinate to do mapping
+
+update global view with every local view after each movement = slam 
+slam desperately need coordinate
+
+updating need reference frame
+
+every local view has coordinate
+
+after each movement, reverse the movement then add the new coordination at the original global view
+transition first then rotation (when reversing)
+because when move, always turn then move 
+
+Question: reverse until original position (all the moves) or just one move 
+if all the moves, more drifting, cant map correctly 
+
+drifting prevention
+every movement have to move to a point that can be mapped to the refer frame
+
+drifting
+1. environment: friction,windy (drone)
+2. circuit faulty: motor issues (calibration), power inbalance (wire transfer power differently, short circuited)
+3. 
