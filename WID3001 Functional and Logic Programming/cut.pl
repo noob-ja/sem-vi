@@ -43,9 +43,20 @@ p(3).
 %		-> X = 1, Y = 2
 %
 
+% GREEN CUT
 marks(X, 'A'):- X >= 80, !.
 marks(X, 'B'):- X >= 65, !.
 marks(X, 'C'):- X >= 55, !.
 marks(X, 'D'):- X >= 50, !.
 marks(X, 'Passed'):- X >= 40, !.
 marks(X, 'Failed').
+
+% RED CUT
+holiday(thursday, feb1).
+holiday(tuesday, may1).
+weekend(saturday).
+weather(saturday, fair_weather).
+shopping(Day):- holiday(Day,__),!.
+shopping(Day):- weather(Day, fair_weather), weekend(Day).
+% The cut changes the declarative meaning of the program
+% Now the program only output holiday instead of weekend and holiday
