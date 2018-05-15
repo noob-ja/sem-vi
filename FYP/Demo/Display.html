@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Testing</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+</head>
+
+<body>
+    <input type="file" name="file" id="file">
+    <div id="mapid" style="width: 100%; height: 800px;"></div>
+    <script>
+    var osmUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+    osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    var LAT = 3.0540085;
+    var LONG = 101.6207183;
+    var mymap = L.map('mapid', {
+    	modal: true
+    }).setView([LAT, LONG], 14);
+    L.tileLayer(osmUrl, {
+    	maxZoom: 18,
+    	attribution: osmAttrib
+    }).addTo(mymap);
+
+    document.getElementById('file').onchange = function() {
+        var file = this.files[0];
+        var reader = new FileReader();
+        reader.onload = function(progressEvent) {
+            var lines = this.result.split('\n');
+            for (var line = 0; line < lines.length; line++) {
+                var info = lines[line].split(',');
+                if(info[0]=='-' || info[1]=='-' || info[0]=='' || info[1]=='') continue;
+                L.marker([info[0], info[1]]).addTo(mymap);
+            }
+        }
+        reader.readAsText(file);
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <?php 
+        echo 'hello';
+    ?>
+</body>
+
+</html>
