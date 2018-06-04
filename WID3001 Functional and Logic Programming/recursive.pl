@@ -28,10 +28,15 @@ go:- repeat, write('Enter a number (0 to exit): |: '),
     write('The square root of the number is: '),write(Y),nl,
     (X=0,!;fail).
 %Q4
-pyramid(Level):- Level > 0, 
-    N is Level,
-    repeat,
-    write('*'),N is -(N,1),(N=0,!;fail),
-    nl,
-    Next is Level - 1, 
-    pyramid(Next).
+pyramid(0):-!.
+pyramid(Level):- 
+    Level > 0, 
+    Stars is Level*2-1, repeat_write(Stars,'*'), nl,
+    Next is Level-1, pyramid(Next).
+
+repeat_write(0,_):- !.
+repeat_write(N,Char):-
+    N>0,
+    write(Char),
+    N1 is N-1,
+    repeat_write(N1,Char).
